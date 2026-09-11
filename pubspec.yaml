@@ -1,0 +1,42 @@
+name: snake_battle
+description: "Arena snake combat: outgrow, outmanoeuvre and destroy rival snakes."
+publish_to: 'none'
+
+version: 1.1.0+3
+
+environment:
+  sdk: ^3.10.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  google_mobile_ads: ^7.0.0
+  shared_preferences: ^2.5.4
+  audioplayers: ^6.5.1
+  provider: ^6.1.5+1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/audio/
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/icon.png"
+  # Adaptive icon: full-bleed dark background + enlarged, centred logo so the
+  # launcher no longer shrinks the icon and leaves margins on all 4 sides.
+  adaptive_icon_background: "#05021B"
+  adaptive_icon_foreground: "assets/images/icon_foreground.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
