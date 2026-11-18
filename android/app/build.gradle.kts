@@ -26,10 +26,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
-    }
-
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.snakebattle.snake_battle"
@@ -65,6 +61,21 @@ android {
     }
 }
 
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+    }
+}
+
 flutter {
     source = "../.."
+}
+
+dependencies {
+    // Google Analytics for Firebase: feeds AdMob "user metrics" for the linked
+    // Firebase project (app/google-services.json). It starts on its own, so no
+    // Dart code is needed. The Google Mobile Ads SDK (play-services-ads 24.x)
+    // comes from the google_mobile_ads plugin.
+    implementation(platform("com.google.firebase:firebase-bom:35.2.0"))
+    implementation("com.google.firebase:firebase-analytics")
 }
